@@ -1,11 +1,7 @@
-# Basic Flask App
+# Visual Grounding for VQA
+This is the latest version for VQA visual grounding crowdsourcing. This version is based on the Flask.
 
-This small repo demonstrates a proper file structure for a Flask app. The folders named *static* and *templates* are required.
+![image](https://github.com/CCYChongyanChen/VizWizVQAGroundingCrowdSourcing/blob/main/static/images/instructions.png)
+![image](https://github.com/CCYChongyanChen/VizWizVQAGroundingCrowdSourcing/blob/main/static/images/steps.png)
 
-**Routes** and **static files** are handled correctly in all `src` and `href` attributes in the template files.
 
-The template file `base.html` is used as a shell by the other three HTML templates. This means they insert content into `base.html` according to Jinja2 template rules.
-
-After installing all dependencies, run the app by entering its folder and typing:
-
-`$ python routes.py`
