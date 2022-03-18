@@ -1,0 +1,12 @@
+
+ [[
+    {"question": "What type of floor is this?", "answers": ["wooden"], "image": "VizWiz_qua_7.jpg", "q_type": "wholeimage"}, 
+    {"question": "what is the brand?", "answers": ["estee lauder"], "image": "VizWiz_qua_3.jpg", "q_type": "text2"}, 
+    {"question": "Can you see my seat number?", "answers": ["No"], "image": "VizWiz_qua_5.jpg", "q_type": "Cannotdraw"}, 
+    {"question": "How many cups are there?", "answers": ["4"], "image": "VizWiz_qua_6.jpg", "q_type": "SingleRegion_#OfObjectLargeThan5"},
+    {"question": "what color is this?", "answers": ["orange"], "image": "VizWiz_qua_1.jpg", "q_type": "color"}, 
+    {"question": "Is the painting in the center of the image? Is this oil painting?", "answers": ["no yes"], "image": "VizWiz_qua_9.jpg", "q_type": "MultiQuestionTrue"}, 
+    {"question": "What kind of ornament is this?", "answers": ["horse"], "image": "VizWiz_qua_4.jpg", "q_type": "Complex boundary&imagewithhole"}, 
+    {"question": "How many keys are there?", "answers": ["2"], "image": "VizWiz_qua_8.jpg", "q_type": "SingleRegion_connected"}, 
+    {"question": "How many birds are there?", "answers": ["4"], "image": "VizWiz_qua_0.jpg", "q_type": "MultiRegion"},  
+    {"question": "What is this? Could you tell me what is this?", "answers": ["Fish Oil"], "image": "VizWiz_qua_2.jpg", "q_type": "Occulsion&text1&multiplequestionsFalse"}]]
