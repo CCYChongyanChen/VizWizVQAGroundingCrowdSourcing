@@ -1,0 +1,35 @@
+
+                        <!------- image column ------->
+                        <div class="col-sm-8 col-md-6">
+
+                                <!---------- Image ---------->
+                                <div class="image_wrap" style="overflow:hidden">
+                                    
+                                        <div class="viewer" >
+    
+                                        <h3 class="text-secondary" id="question"></h3>
+                                        <h3 class="text-secondary" id="answer"></h3>
+    
+                                        <input type="hidden" id="task1forsubmit" name="task1forsubmit">
+    
+                                        <div id="canvaswrapper" style="position:relative;width:500px; height:500px;">
+                                            <img class="coveredImage" id="image" src="" width="400" height="500" style="position: absolute; left: 0; top: 0; z-index: 0; user-select: none;">
+                                            <canvas id="myCanvas" width="400" height="500" 
+                                            style="position: absolute; left: 0; top: 0; z-index: 1; "></canvas>
+                                        </div>
+                                        <div class="btnsCenterContainer">
+                                        <button type="button" class="btn btn-secondary" onclick="DeleteAllThenInit()">Clear</button>
+                                        <button type="button" class="btn btn-secondary" onclick="UnDo()" data-toggle="tooltip"  data-placement="top" title="ctrl+z">Undo</button>
+                                        <!-- <div class="checkbox" style="margin-top: 0px; margin-bottom: 0px;"> -->
+                                        <label style="margin-top: 20px; margin-left: 10px;">
+                                                <input name="WholeImage" id="WholeImage" type="checkbox" value="WholeImage" class="Step3" >
+                                                Select the whole image
+                                            </label>
+                                                <!-- </div> -->
+                                    </div>
+                                    </div>
+    
+    
+                                </div>
+                            </div>
+    

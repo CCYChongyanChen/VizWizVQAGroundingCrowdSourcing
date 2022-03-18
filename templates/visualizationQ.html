@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <title>VizWiz-Grounding-Visualization</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    
+    <!-- jQuery library -->
+    <script src="static/js/jquery.min.js"></script>
+    <!-- <script src="static/js/jquery.js"></script>  -->
+    <script type="text/javascript" src="static/QA_annotations/test.json"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="static/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='static/js/externalHIT_v1.js'></script>
+    </head>
+    <body>
+        <!-- <p id="demo">Click the button to change the text in this paragraph.</p> -->
+
+
+        <div class="container">
+
+            <h1>Visualization</h1>
+
+            <h4 class="text-secondary" id="hitid">HIT-ID:</h4>
+            <h4 class="text-secondary" id="workerid">Worker-ID:</h4>
+            <h4 class="text-secondary" id="usetime">Consumed Time:</h4>
+            <h4 class="text-secondary" id="browser">browser:</h4>
+            <h4 class="text-secondary" id="comment">Comment:</h4>
+        
+        
+        
+        </div>
+        
+        <!-- <div class="myDIV"><button class="glyphicon glyphicon-question-sign" aria-hidden="true"></button></div>
+        <div class="hide">I am shown when someone hovers over the div above.</div> -->
+
+
+        <!-- panel-heading -->
+        <form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'><input type='hidden' value='' name='assignmentId' id='assignmentId'/>
+        
+            <div class="container">
+                <ul class="nav nav-tabs controlImg">
+                    <li class="active"><a href="#tab1" id="TAB1" data-toggle="tab" onClick="find_activated_tab(this.id)">Image 1</a></li>
+                    <li ><a href="#tab2" data-toggle="tab" id="TAB2" onClick="find_activated_tab(this.id)">Image 2</a></li>
+                    <li ><a href="#tab3" data-toggle="tab" id="TAB3" onClick="find_activated_tab(this.id)">Image 3</a></li>
+                    <li ><a href="#tab4" data-toggle="tab" id="TAB4" onClick="find_activated_tab(this.id)">Image 4</a></li>
+                    <li ><a href="#tab5" data-toggle="tab" id="TAB5" onClick="find_activated_tab(this.id)">Image 5</a></li>
+                    <li ><a href="#tab6" data-toggle="tab" id="TAB6" onClick="find_activated_tab(this.id)">Image 6</a></li>
+                    <li  ><a href="#tab7" data-toggle="tab" id="TAB7" onClick="find_activated_tab(this.id)">Image 7</a></li>
+                    <li  ><a href="#tab8" data-toggle="tab" id="TAB8" onClick="find_activated_tab(this.id)">Image 8</a></li>
+                    <li ><a href="#tab9" data-toggle="tab" id="TAB9" onClick="find_activated_tab(this.id)">Image 9</a></li>
+                    <li ><a href="#tab10" data-toggle="tab" id="TAB10" onClick="find_activated_tab(this.id)">Image 10</a></li>
+            </ul>
+
+
+                
+                    <!-------- main content ---------->
+                    <div class="row">
+                    
+
+                        {% include 'image.html'%}
+                        {% include 'steps.html'%}
+
+
+                        <p id ="xycoorcommonAnswer"></p>
+
+
+                        
+
+
+                    </div>
+            <!-- end section 1-->
+
+
+                <div class="tab-content">
+                    <div class="tab-pane btndiv active" id="tab1">
+                        <button type="button" class="btn btnNext" id = "btnNext1">Next</button>
+                    </div>
+                    <div class="tab-pane btndiv" id="tab2">
+                        <button type="button" class="btn btnNext">Next</button>
+                        <button type="button" class="btn btnPrevious" >Previous</button>
+                    </div>
+                    <div class="tab-pane btndiv" id="tab3">
+                        <button type="button" class="btn btnNext" >Next</button>
+                        <button type="button" class="btn btnPrevious" >Previous</button>
+                    </div>
+                    <div class="tab-pane btndiv" id="tab4">
+                        <button type="button" class="btn btnNext" >Next</button>
+                        <button type="button" class="btn btnPrevious" >Previous</button>
+                    </div>
+                    <div class="tab-pane btndiv" id="tab5">
+                        <button type="button" class="btn btnNext" >Next</button>
+                        <button type="button" class="btn btnPrevious" >Previous</button>
+                    </div>
+                    
+                    <div class="tab-pane btndiv" id="tab6">
+                        <button type="button" class="btn btnNext" >Next</button>
+                        <button type="button" class="btn btnPrevious" >Previous</button>
+                    </div>
+                    
+                    <div class="tab-pane btndiv" id="tab7">
+                        <button type="button" class="btn btnNext" >Next</button>
+                        <button type="button" class="btn btnPrevious" >Previous</button>
+                    </div>
+                    
+                    <div class="tab-pane btndiv" id="tab8">
+                        <button type="button" class="btn btnNext" >Next</button>
+                        <button type="button" class="btn btnPrevious" >Previous</button>
+                    </div>
+                    
+                    <div class="tab-pane btndiv" id="tab9">
+                        <button type="button" class="btn btnNext" >Next</button>
+                        <button type="button" class="btn btnPrevious" >Previous</button>
+                    </div>
+                    <div class="tab-pane btndiv" id="tab10">
+
+                        <button type="button" class="btn btnNextGroup" onClick=next_href()>Next Group</button>
+                        
+                        
+                        <button type="button" class="btn btnPrevious" >Previous</button>
+                    </div>
+                </div>
+
+            </div>
+            
+
+
+        </form>
+    
+        <script src="static/js/V_initialize.js"></script>
+        <script src="static/js/V_Image_related.js"></script>
+
+
+        
+        <script language='Javascript'>turkSetAssignmentID();</script>
+    </body>
+</html>

@@ -1,0 +1,426 @@
+<p>
+
+        Please view the tabs below to see the 7 different kinds of difficult examples.</p>
+<ul class="nav nav-tabs Examplenav-tabs">
+
+        <li class="active"><a data-toggle="tab" href="#e4">Complex boundary</a></li>
+        <li><a data-toggle="tab" href="#e2">Property related</a></li>
+        <!-- <li><a data-toggle="tab" href="#e7">Related visual entity</a></li> -->
+        <li><a data-toggle="tab" href="#e3">Whole image</a></li>
+        <li><a data-toggle="tab" href="#e1">Image with hole</a></li>
+        <li><a data-toggle="tab" href="#e5">Occlusion</a></li>
+    </ul>
+    
+    <div class="tab-content examples">
+        <div id="e1" class="tab-pane fade">
+        <br>
+        <p>
+        If the object (e.g., tire, donut, ring) has a hole, please only draw the outside boundary of the object.
+        </p>
+
+        <div class="row">
+                <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                        <p><strong>Question: </strong> What is this?
+                        <br>
+                        <strong>Answer: </strong> laundry detergent</p>
+                    <img src="static/images/imagewithhole1.png" alt="...">
+                    <div class="caption">
+                            <h4>
+                                    <span class="glyphicon glyphicon-ok green" aria-hidden="true"> Good boundary</span>
+                                
+                                </h4>
+                    </div>
+                </div>
+                </div>
+                    
+                <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                                <p><strong>Question: </strong> What is this?
+                                <br>
+                                <strong>Answer: </strong> laundry detergent</p>
+                        <img src="static/images/imagewithhole2.png" alt="...">
+                        <div class="caption">
+                                <h4>
+                                        <span class="glyphicon glyphicon-remove red" aria-hidden="true"> Cannot draw like this</span>
+                                        
+                                    </h4>
+                            <p>Explanation: 
+                                    You do not need to draw the hole in the image because the system does not allow you to draw more than one polygon.
+                                    </p>
+                        </div>
+                        </div>
+                    </div>
+        </div>
+        
+        
+        
+        <button type="button" class="btn ExamplebtnPrevious" >Previous Example</button>
+        <button type="button" class="btn ExamplebtnNext" >Next Example</button>
+        </div>
+
+
+
+
+
+
+
+
+
+
+            <div id="e2" class="tab-pane fade">
+            <br>
+            <p>If the question asks about the object: draw the outside boundary of the object (Example 1). Usually, questions look like “what is this?”.</p>
+            <p>If the question asks about the specific details (a property) of the object: draw the boundary of the related area. (Example 2 & Example 3 & Example 4). </p>
+            
+            <br>
+            Tips:
+            <p>(1) You can first identify if the object is mentioned in the question. If the object is mentioned in the question, usually it asks about the property of the object (Example 2 & Example 3 & Example 4). </p>
+            <p>(2) If the question asks about specific details (a property) of a visual entity (e.g., color of clothes), please comprehensively annotate all regions that would lead to the answer rather than a minimum visible region (Example 2 & Example 3 & Example 4). </p>
+            <p>(3) Question may use other object(s) to refer to the target object (e.g., "What is the color of the bag next to the man's hand on the table?"). Please only draw the target object and nothing else.      
+       
+            <div class="row">
+
+
+                    <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <p><strong>Question: </strong> What is this?
+                                <br>
+                                <strong>Answer: </strong> CeraVe daily moisturizing lotion</p>
+                            <img src="static/images/invisiblepart11.png" alt="...">
+                            <div class="caption">
+                                    <h4>
+                                            <!-- <span class="glyphicon  green" aria-hidden="true"> Example 1</span> -->
+                                            
+                                            <span class="glyphicon glyphicon-ok green" aria-hidden="true"> Good boundary</span>
+                                            
+                                        </h4>
+                                    <p>Explanation: The question asks what the object is. Hence, you need to draw the outside boundary of the whole object. 
+                                        </p>
+                                        <!-- Note that while the answer to this question is the same as the answer to Example Example 3, however, their annotated regions are different due to their different questions. -->
+
+                     
+                            
+                            </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-sm-6 col-md-3">
+                                <div class="thumbnail">
+                                    <p><strong>Question: </strong> What brand of the lotion is this?
+                                    <br>
+                                    <strong>Answer: </strong> CeraVe</p>
+                                <img src="static/images/text1.png" alt="...">
+                                <div class="caption">
+                                        <h4>
+                                                <!-- <span class="glyphicon  green" aria-hidden="true"> Example 1</span> -->
+                                                
+                                                <span class="glyphicon glyphicon-ok green" aria-hidden="true"> Good boundary</span>
+                                                
+                                            </h4><p>Explanation: The question askes specifically about the property (brand) of the object (lotion). Hence, you need to draw the boundary of the related text area (CeraVe).</p>
+                                    
+                                
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                    <div class="thumbnail">
+                                    <p><strong>Question: </strong> Is it by Bill Gates?
+                                    <br>
+                                    <strong>Answer: </strong> Yes </p>
+                                    <img src="static/images/EK2.png" alt="...">
+                                    <div class="caption">
+                                    <h4>
+                                    <span class="glyphicon glyphicon-ok green" aria-hidden="true"> Good boundary</span>
+                                            
+                                    <!-- <span class="glyphicon glyphicon-option-horizontal red" aria-hidden="true"> Yes</span> -->
+                                    </h4>
+                                    <p> Explanation: The question asks the property (author) of object (book). Hence, you need to draw the boundary of the related text area (Bill Gates). </p>
+                                    </div>
+                                    </div>
+                                    </div>
+
+                                <div class="col-sm-6 col-md-3">
+                                        <div class="thumbnail">
+                                                <p><strong>Question: </strong> What's the color of the cloth?
+                                                <br>
+                                                <strong>Answer: </strong> White</p>
+                                            <img src="static/images/color.png" alt="...">
+                                            <div class="caption">
+                                                    <h4>
+                                                            <span class="glyphicon glyphicon-ok green" aria-hidden="true"> Good boundary</span>
+                                                        
+                                                        </h4>
+                                            <p>Explanation: The question asks about the property (color) of the object (cloth). Please draw all the area that would lead to the answer rather than a minimum visible region.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+
+
+                        
+                    
+                        
+
+            </div>
+            
+            <button type="button" class="btn ExamplebtnPrevious" >Previous Example</button>
+            <button type="button" class="btn ExamplebtnNext" >Next Example</button>
+            </div>
+            <div id="e3" class="tab-pane fade">
+            <br>
+            <p>If the answer is referring to the whole image, click the "Select the whole image" button to draw a rectangle to indicate that the whole picture is the target region. Usually, this happens when the camera is set too close to the object.</p>
+
+            <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                            <p><strong>Question: </strong> What is this?
+                            <br>
+                            <strong>Answer: </strong> CeraVe daily moisturizing lotion</p>
+                        <img src="static/images/wholeimage.png" alt="...">
+                        <div class="caption">
+                                <h4>
+                                        <span class="glyphicon glyphicon-ok green" aria-hidden="true"> Good boundary</span>
+                                    
+                                    </h4>
+                        <p>Explanation: Draw a rectangle to include the whole image as the target region.</p>
+                        </div>
+                    </div>
+                    </div>
+                        
+            </div>
+
+            <br>
+            <button type="button" class="btn ExamplebtnPrevious" >Previous Example</button>
+            <button type="button" class="btn ExamplebtnNext" >Next Example</button>
+            </div>
+            
+            <div id="e4" class="tab-pane fade in active">
+                <br>
+                <p>  Please try your best to trace the boundary of the object as tightly as possible. 
+                    If the boundary is too complex, please do your best, it does not need to be perfect. 
+                </p> 
+                <br>
+                
+                <strong>Simple boundary</strong>
+                <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            
+                            <p><strong>Question: </strong> What is this?
+                            <br>
+                            <strong>Answer: </strong> CeraVe daily moisturizing lotion for normal to dry skin.</p>
+                
+                            <img src="static/images/howgood11.png" alt="...">
+                            <div class="caption">
+                            <h4>
+                                    <span class="glyphicon glyphicon-ok green" aria-hidden="true"> Good boundary</span>
+                                    
+                                    </h4>
+                            </div>
+                        </div>
+                        </div>
+                            
+                        <div class="col-sm-6 col-md-3">
+                                <div class="thumbnail">
+                                                        
+                                    <p><strong>Question: </strong> What is this?
+                                    <br>
+                                    <strong>Answer: </strong> CeraVe daily moisturizing lotion for normal to dry skin.</p>
+                                    
+                                <img src="static/images/howgood12.png" alt="...">
+                                <div class="caption">
+                                        <h4>
+                                                <span class="glyphicon glyphicon-remove red" aria-hidden="true"> Bad boundary</span>
+                                        
+                                            </h4>
+                                    <p>Explanation: The object has a simple boundary. Please trace the boundary as tightly as you can.</p>
+                                </div>
+                                </div>
+                            </div>
+
+                </div>
+
+                <strong>Complex boundary</strong>
+                <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                                <div class="thumbnail">
+                                    <p><strong>Question: </strong> What plant is this?
+                                    <br>
+                                    <strong>Answer: </strong> Dracaena sanderiana</p>
+                                <img src="static/images/howgood21.png" alt="...">
+                                <div class="caption">
+                                        <h4>
+                                                <span class="glyphicon glyphicon-ok green" aria-hidden="true">  Good boundary</span>
+                                            
+                                        </h4>
+                                </div>
+                                </div>
+                            </div>
+                            
+                        <div class="col-sm-6 col-md-3">
+                                <div class="thumbnail">
+                                    <p><strong>Question: </strong> What plant is this?
+                                    <br>
+                                    <strong>Answer: </strong> Dracaena sanderiana</p>
+                                <img src="static/images/howgood22.png" alt="...">
+                                <div class="caption">
+                                        <h4>
+                                                <span class="glyphicon glyphicon-ok green" aria-hidden="true">  Acceptable boundary</span>
+                                            
+                                        </h4>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-3">
+                                    <div class="thumbnail">
+                                        <p><strong>Question: </strong> What plant is this?
+                                        <br>
+                                        <strong>Answer: </strong> Dracaena sanderiana</p>
+                                    <img src="static/images/howgood23.png" alt="...">
+                                    <div class="caption">
+                                            <h4>
+                                                <span class="glyphicon glyphicon-remove red" aria-hidden="true">  Bad boundary</span>
+                                                
+                                        </h4>
+                                        <p>Explanation: Please trace the boundary as tightly as possible.</p>
+                                    </div>
+                                    </div>
+                                </div>
+                </div>
+
+
+
+                <button type="button" class="btn ExamplebtnNext">Next Example</button>
+            </div>
+            
+            <div id="e5" class="tab-pane fade">
+                <br>
+                <p>Please only draw for the visible part of the target object if possible. 
+                    <br>
+                    If something partially obscures the target object, please do not include that (Example 1 & Example 3).
+                    <br>
+                    If something obstructs the object into more than one region, it's okay to include it, since the system only allows you to draw one polygon (Example 2). </p>
+                
+            
+
+            <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                            <p><strong>Question: </strong> What is this?
+                            <br>
+                            <strong>Answer: </strong> CeraVe daily moisturizing lotion for normal to dry skin</p>
+                        <img src="static/images/invisiblepart11.png" alt="...">
+                        <div class="caption">
+                                <h4>
+                                        <span class="glyphicon glyphicon-ok green" aria-hidden="true"> </span>
+                                        <span class="green">  Example 1 : Good boundary</span>
+                                    
+                                    
+                                    </h4>
+                        <p>Explanation: Avoid occlusion when you can.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                                <p><strong>Question: </strong> What is this?
+                                <br>
+                                <strong>Answer: </strong> CeraVe daily moisturizing lotion for normal to dry skin</p>
+                        <img src="static/images/invisiblepart21.png" alt="...">
+                        <div class="caption">
+                            <h4>
+                                    <span class="glyphicon glyphicon-ok green" aria-hidden="true"> </span>
+                                    <span class="green">  Example 2 : Good boundary</span>
+                                
+                                
+                                </h4>
+                            <p>Explanation: In this case, it's acceptable to include the chopsticks. Otherwise, 
+                                     you need more than one polygon to draw the region in the image. </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <p><strong>Question: </strong> What is this?
+                                <br>
+                                <strong>Answer: </strong> CeraVe daily moisturizing lotion for normal to dry skin</p>
+                            <img src="static/images/invisiblepart12.png" alt="...">
+                            <div class="caption">
+                                    <h4>
+                                            <span class="glyphicon glyphicon-remove red" aria-hidden="true"> </span>
+                                            <span class="red">  Example 3 : Bad boundary</span>
+                                        </h4>
+                                        <p>Explanation: You should not include the finger for this image annotation. </p>
+                            </div>
+                            </div>
+                        </div>
+            </div>
+
+
+
+
+
+                
+                <button type="button" class="btn ExamplebtnPrevious" >Previous Example</button>
+            </div>
+
+
+
+            
+               
+            <!-- <div id="e7" class="tab-pane fade">
+                    <br>
+                    <p>A question about the target entities may use other entities to help refer to the target. Choose the target entities only and nothing else. </p>
+                    <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                    <p><strong>Question: </strong> What is the color of the bag on the rock next to the man's hand?
+                                    <br>
+                                    <strong>Answer: </strong> Grey</p>
+                                <img src="static/images/bagcolor.png" alt="...">
+                                <div class="caption">
+                                        <h4>
+                                                <span class="glyphicon glyphicon-ok green" aria-hidden="true"> Good boundary</span>
+                                            
+                                            </h4>
+                                <p>Explanation: Please only ground for the target entity (the grey bag) that the answer is referring to and nothing else.</p>
+                                </div>
+                            </div>
+                            </div>
+                                
+                    </div>
+        
+                    <br>
+                    <button type="button" class="btn ExamplebtnPrevious" >Previous Example</button>
+                    <button type="button" class="btn ExamplebtnNext" >Next Example</button>
+                    </div> -->
+                         
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>

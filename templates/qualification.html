@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock head %}
+
+{% block IMPORTANT %}
+<h2 class="title">Qualification Test</h2> 
+{% endblock IMPORTANT %}
+
+{% block numimages%}
+<li><p>You will complete steps 1-3 for 10 images in this HIT.</p></li>
+{% endblock numimages %}
+{% block qualificationmessage%}
+<li><p>You can only do the qualification task once. If you pass the qualification, we will grant you the qualification automatically. 
+        Once you get your qualification, you can find our main task by searching the title "Locate the answer to the visual question (main task)".</p></li>
+
+    
+{% endblock qualificationmessage%}
+
+{% block body %}
+
+<form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'><input type='hidden' value='' name='assignmentId' id='assignmentId'/>
+        
+    <div class="container">
+    <ul class="nav nav-tabs controlImg">
+            <li class="active"><a href="#tab1" id="TAB1" data-toggle="tab" onClick="find_activated_tab(this.id)">Image 1</a></li>
+            <li class="disabled"><a href="#tab2" data-toggle="tab" id="TAB2" onClick="find_activated_tab(this.id)">Image 2</a></li>
+            <li class="disabled"><a href="#tab3" data-toggle="tab" id="TAB3" onClick="find_activated_tab(this.id)">Image 3</a></li>
+            <li class="disabled"><a href="#tab4" data-toggle="tab" id="TAB4" onClick="find_activated_tab(this.id)">Image 4</a></li>
+            <li class="disabled"><a href="#tab5" data-toggle="tab" id="TAB5" onClick="find_activated_tab(this.id)">Image 5</a></li>
+            <li class="disabled"><a href="#tab6" data-toggle="tab" id="TAB6" onClick="find_activated_tab(this.id)">Image 6</a></li>
+            <li class="disabled"><a href="#tab7" data-toggle="tab" id="TAB7" onClick="find_activated_tab(this.id)">Image 7</a></li>
+            <li class="disabled"><a href="#tab8" data-toggle="tab" id="TAB8" onClick="find_activated_tab(this.id)">Image 8</a></li>
+            <li class="disabled"><a href="#tab9" data-toggle="tab" id="TAB9" onClick="find_activated_tab(this.id)">Image 9</a></li>
+            <li class="disabled"><a href="#tab10" data-toggle="tab" id="TAB10" onClick="find_activated_tab(this.id)">Image 10</a></li>
+    </ul>
+
+    <div class="alert alert-danger alert-dismissible" class="qualiAlert" id="qualiFail" role="alert" style="display: none;">
+        <p id="TqualiFail"></p>
+
+      </div>
+      
+    <div class="alert alert-success alert-dismissible" class="qualiAlert" id="qualiPass" role="alert" style="display: none;">
+        <p id="TqualiPass">Congratulations! Your grounding for thsi image is successful!</p>
+
+      </div>
+        
+            <!-------- main content ---------->
+            <div class="row">
+            
+
+                {% include 'image.html'%}
+                {% include 'steps.html'%}
+                <p id ="xycoorcommonAnswer"></p>
+
+
+                
+
+
+            </div>
+    <!-- end section 1-->
+
+
+        <div class="tab-content">
+            <div class="tab-pane btndiv active" id="tab1">
+                <button type="button" class="btn btnNext" id = "btnNext1">Next</button>
+            </div>
+            <div class="tab-pane btndiv" id="tab2">
+                <button type="button" class="btn btnNext">Next</button>
+                <button type="button" class="btn btnPrevious" >Previous</button>
+            </div>
+            <div class="tab-pane btndiv" id="tab3">
+                <button type="button" class="btn btnNext" >Next</button>
+                <button type="button" class="btn btnPrevious" >Previous</button>
+            </div>
+            <div class="tab-pane btndiv" id="tab4">
+                <button type="button" class="btn btnNext" >Next</button>
+                <button type="button" class="btn btnPrevious" >Previous</button>
+            </div>
+            
+            <div class="tab-pane btndiv" id="tab5">
+                <button type="button" class="btn btnNext" >Next</button>
+                <button type="button" class="btn btnPrevious" >Previous</button>
+            </div>
+            
+            <div class="tab-pane btndiv" id="tab6">
+                <button type="button" class="btn btnNext" >Next</button>
+                <button type="button" class="btn btnPrevious" >Previous</button>
+            </div>
+            
+            <div class="tab-pane btndiv" id="tab7">
+                <button type="button" class="btn btnNext" >Next</button>
+                <button type="button" class="btn btnPrevious" >Previous</button>
+            </div>
+            
+            <div class="tab-pane btndiv" id="tab8">
+                <button type="button" class="btn btnNext" >Next</button>
+                <button type="button" class="btn btnPrevious" >Previous</button>
+            </div>
+            
+            <div class="tab-pane btndiv" id="tab9">
+                <button type="button" class="btn btnNext" >Next</button>
+                <button type="button" class="btn btnPrevious" >Previous</button>
+            </div>
+            <div class="tab-pane btndiv" id="tab10">
+
+                <button type="button" class="btn waves-effect waves-light btnsubmit"  data-target="#centralModalLg" id= "submitbtn">Submit</button>
+                
+                
+                <button type="button" class="btn btnPrevious" >Previous</button>
+            </div>
+        </div>
+
+    </div>
+    
+    {% include 'suggestions.html'%}
+    {% include 'alert.html'%}
+
+</form>
+
+
+<script src="static/js/Cookie.js"></script>
+<script src="static/js/Initialize.js"></script>
+<script src="static/js/qualification.js"></script>
+<script src="static/js/EnableDisable.js"></script>
+<script src="static/js/Image_related.js"></script>
+<script src="static/js/WholeHTML.js"></script>
+<script language='Javascript'>turkSetAssignmentID();</script>
+
+{% endblock %}

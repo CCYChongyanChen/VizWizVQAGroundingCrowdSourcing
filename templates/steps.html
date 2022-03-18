@@ -1,0 +1,201 @@
+
+                        <!----------- all tasks column ----------->
+                        <div class="col-sm-4 col-md-6">
+                                <!----------  Step: Visual Grounding ------------>
+                                <div class="col-lg-12">
+                                    <h4 style="
+                                        text-align: left;
+                                        font-weight: bold;
+                                        padding: 5px;
+                                        margin: 0px 0px;
+                                    ">
+                                    Please read the question and answer about the image shown on the left. Then complete the 3 steps below.
+                                    </h4>
+                                    <h4 style="
+                                    text-align: left;
+                                    font-weight: bold;
+                                    padding: 5px;
+                                    margin: 0px 0px;
+                                    color:red;
+                                ">
+                                We review the results. If you do not follow the instructions, your work may be rejected.
+                                </h4>
+                                <!-- </div> -->
+    
+                                </div><!----------  Step: Visual Grounding ------------>
+    
+                                <!----------  Step: Text Detection ------------>
+                                <div class="row">
+                                    <div class="col-lg-12 text_detect border-around" style="margin-top: 30px;">
+    
+                                        <table class="ansChoices table table-condensed"
+                                            style="">
+                                            <thead>
+                                            <tr>
+                                                <th colspan="4" class="text-center" style="">
+                                                    <h4 style="font-weight: bold; margin: 2px auto">
+                                                        Step 1: Is more than one question asked?
+                                                        <a class="glyphicon glyphicon-question-sign" aria-hidden="true" data-toggle="popover"  data-placement="top" data-content="
+                                                        For example, the answer to question like ''what brand is this? what type of skin it is for?'' is YES"></a>
+                                                    </h4>
+                                                    
+    
+                                                </th>
+                                            </tr>
+                                            </thead>
+    
+                                            <tbody>
+                                            <tr>
+                                                <!-- Col 1 -->
+                                                <td style="width: 50%; padding-left: 0px">
+    
+                                                    <div class="radio ans_choice pull-right">
+                                                        <label>
+                                                            <input id="step1inputY" name="MULTI_QUESTION_DETECT" type="radio" value="Y">
+                                                            <strong>YES:</strong>
+                                                            More than one question is asked.
+                                                        </label>
+                                                    </div>
+                                                </td>
+    
+                                                <!-- Col 2 -->
+                                                <td style="width: 50%; padding-right: 0px">
+    
+                                                    <div class="radio ans_choice pull-left">
+                                                        <label>
+                                                            <input id="step1inputN" name="MULTI_QUESTION_DETECT" type="radio" value="N" >
+                                                            <strong>NO:</strong>
+                                                            Just one question is asked.
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+    
+                                    </div>
+    
+                                </div><!----------  Step: Text Detection ------------>
+    
+    
+                                <!---------- Step: Multi-focus ---------->
+                                <div class="row">
+    
+                                    <div class="col-sm-12 step2 quality_issues border-around" style="margin-top: 30px;">
+    
+                                        <table class="ansChoices table table-condensed" style="">
+                                            <thead>
+                                            <tr>
+                                                <th colspan="4" class="text-center" style="">
+                                                    <h4 style="font-weight: bold; margin: 2px auto">
+                                                        Step 2: Is more than one polygon needed to locate the region that the answer is referring to? 
+                                                        <a class="glyphicon glyphicon-question-sign" aria-hidden="true" data-toggle="popover"  data-placement="top" data-content="
+                                                        Please see step 2's instructions and examples"></a>
+                                                    </h4>
+                                                    
+    
+                                                </th>
+                                            </tr>
+                                            </thead>
+    
+        
+    
+    
+                                            <tbody>
+                                                <tr>
+                                                    <!-- Col 1 -->
+                                                    <td style="width: 50%; padding-left: 0px">
+    
+                                                        <div class="radio ans_choice pull-right">
+                                                            <label>
+                                                                <input name="MULTI_FOCUS_DETECT" type="radio" value="Y" class="Step2">
+                                                                <strong>YES:</strong>
+                                                                More than one polygon is needed.
+                                                            </label>
+                                                        </div>
+                                                    </td>
+    
+                                                    <!-- Col 2 -->
+                                                    <td style="width: 50%; padding-right: 0px">
+    
+                                                        <div class="radio ans_choice pull-left">
+                                                            <label>
+                                                                <input name="MULTI_FOCUS_DETECT" type="radio" value="N" class="Step2">
+                                                                <strong>NO:</strong>
+                                                                No more than one polygon is needed.
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+    
+    
+    
+                                        </table>
+    
+    
+                                    </div>
+                                </div> <!---------- Step: Multi-focus ---------->
+    
+    
+    
+                                <!---------- Step: Draw polygon ---------->
+                                <div class="row">
+    
+                                    <div class="col-sm-12 step3 border-around" style="margin-top: 30px;">
+    
+                                        <table class="ansChoices table table-condensed" >
+                                            <thead>
+                                            <tr>
+                                                <th colspan="4" class="text-center" style="">
+                                                    <h4 style="font-weight: bold; margin: 2px auto">
+                                                        Step 3: Draw one polygon to locate the region that the answer is referring to by clicking on the image. 
+                                                    
+                                                        <a class="glyphicon glyphicon-question-sign" aria-hidden="true" data-toggle="popover"  data-placement="top" data-content="Please see step 3's instructions and examples."></a>
+                                                        
+    
+                                                    
+                                                    
+                                                    </h4>
+                             
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                        </table>
+    
+                                        <p style="text-align: center; font-weight: bold;
+                                        margin: 10px 0px; font-size: 18px;">
+                                    OR
+                                        </p>
+    
+    
+    
+    
+                                                                        <div class="row">
+                                                                            <div class="col-lg-12">
+    
+                                                                                <div class="input-group ">
+                                                                                    <span class="input-group-addon">
+                                                                                        <div class="checkbox" style="margin-top: 0px; margin-bottom: 0px;">
+                                                                                            <label style="margin-top: 0px; margin-bottom: 0px;">
+                                                                                                <input name="NoDraw" id="nodraw" type="checkbox" value="CANNOT_DRAW" class="Step3" >
+                                                                                                Cannot draw:
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </span>
+                                                                                    <input name="NoDrawReason" id="nodrawreason" type="text"
+                                                                                        placeholder="Input your reason for not drawing for this image"
+                                                                                        title="Input your reason for not drawing for this image"
+                                                                                        class="form-control Step3">
+                                                                                </div>
+    
+    
+    
+                                                                            </div>
+                                                                        </div>
+    
+                                    </div>
+                                </div> <!---------- Step: Draw polygon ---------->
+                    </div>
+                    <!--- end all tasks column --->
+    
